@@ -16,3 +16,6 @@ trigger to delete beacons of deleted users
 delimiter $$
 create trigger beacon_delete_user after delete on beaconapp.users for each row begin delete from beaconapp.beacon where beacon.user_id = old.user_id; end $$
 delimiter $$
+
+Create location table
+CREATE TABLE locations( mac VARCHAR(25), latitude VARCHAR(25),  longtitude VARCHAR(25));
