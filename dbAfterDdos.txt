@@ -10,7 +10,7 @@ Create beacon table
 CREATE TABLE `beaconapp`.`beacon` ( `beacon_id` INT NOT NULL AUTO_INCREMENT , `mac` VARCHAR(30) NOT NULL , `beacon_name` VARCHAR(30) NOT NULL , `photo` VARCHAR(50) NOT NULL , `icon` VARCHAR(50) NOT NULL , `user_id` INT NOT NULL , PRIMARY KEY (`beacon_id`));
 
 ALTER TABLE `beaconapp`.`beacon` ADD UNIQUE(`mac`);
-
+ALTER TABLE `beaconapp`.`beacon` ADD `isWanted` INT NOT NULL AFTER `user_id`;
 
 trigger to delete beacons of deleted users
 delimiter $$
