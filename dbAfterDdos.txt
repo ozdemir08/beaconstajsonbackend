@@ -19,3 +19,4 @@ delimiter $$
 
 Create location table
 CREATE TABLE locations( mac VARCHAR(25), latitude VARCHAR(25),  longtitude VARCHAR(25));
+alter table beaconapp.locations add lastdate timestamp not null after longtitude;
