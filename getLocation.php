@@ -9,7 +9,7 @@
       exit;
     }
 
-    $sql = "SELECT * FROM locations WHERE mac = $mac";
+    $sql = "SELECT * FROM beacon WHERE mac = $mac";
     if(mysqli_query($conn, $sql)){
       $result = $conn -> query ($sql);
       if($result->num_rows > 0){
